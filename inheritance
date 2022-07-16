@@ -1,0 +1,22 @@
+class employee:            # base class 
+    company = "google"
+
+    def printData(self):
+        print(f"I am an employee working in {self.company}")
+
+class programmer(employee):      # Derived class
+    language = "python"
+
+
+    def mylanguage(self):
+        print(f"The language used by me is {self.language}")
+    def printData(self):
+        print(f"I am an employee working in {self.company}")
+
+
+a = employee()           # object of base class
+b = programmer()         # object of derived class
+
+a.printData()
+b.printData()
+b.mylanguage()
