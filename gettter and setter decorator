@@ -1,0 +1,22 @@
+# @getters and setters decorators
+
+
+class employee:
+    company = "ggoday"
+    salary = 5600
+    salaryBonus = 500
+
+    @property       # getter decorator to get the value of total salary
+    def totalSalary(self):
+        return self.salary + self.salaryBonus
+
+    @totalSalary.setter   # getter decorator to set the value of total salary and salarybonus
+    def totalSalary(self, val):
+        self.salaryBonus = val -self.salary
+    
+e = employee()
+print(f"Total salary befor setter {e.totalSalary}")
+print(f"Total salary bonus before setter {e.salaryBonus}")
+e.totalSalary =5800
+print(f"Total salary after setter {e.totalSalary}")
+print(f"Total salary bonus after setter {e.salaryBonus}")
