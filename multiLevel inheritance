@@ -1,0 +1,19 @@
+########## multileevel Inheritance ##########
+
+class animal:
+    def setdata(self,name,sound,color):
+        self.name = name
+        self.sound = sound
+        self.color = color
+
+class leg4animal(animal):
+    limbs = 4
+
+class dog(leg4animal):
+   def printData(self):
+    print(f" Name of Dog is {self.name} \n having {self.color} color")
+
+
+dog1 = dog()
+dog1.setdata('Tomy','bhow-bhow','black')
+dog1.printData()
