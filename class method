@@ -1,0 +1,19 @@
+#class method 
+
+class employee:
+    company = "Amazon"
+    location = "Newyork"
+    salary = 1000
+
+    # def changesalary(self,sal):
+    #     self.__class__.salary = sal
+        
+    @classmethod            # class method is used to change the value of the class attribute.
+    def changesalary(cls,sal): 
+        cls.salary = sal      # changing the value of the class attribute salary .
+
+e1 = employee()   # creating object of employee class 
+print(e1.salary)  # printing the attribute salary before changement
+e1.changesalary(2000)    # calling the changesalary() function.
+print(e1.salary)        # printing the  instance attibute salary after changing it .
+print(employee.salary)   # printing the class attribute salary after changing it.
